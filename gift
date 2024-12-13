@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürpriz Hediye</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e6f6; /* Yumuşak bir arka plan rengi */
+        }
+        .gift-box {
+            width: 200px;
+            height: 200px;
+            background-color: #ffcc99; /* Hediye kutusunun rengi */
+            border: 2px solid #ff9966; /* Hediye kutusunun kenarları */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        }
+        .gift-box:hover {
+            transform: scale(1.1) rotate(10deg); /* Hediye kutusuna animasyon ekleme */
+        }
+        .gift-box:before {
+            content: '🎁'; /* Hediye kutusunun içine emoji ekleme */
+            font-size: 48px;
+            position: absolute;
+        }
+        #poem {
+            display: none;
+            font-size: 20px;
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-box" onclick="showPoem()"></div> <!-- Hediye kutusu -->
+    <div id="poem">Sevdiğim için yazdığım güzel bir şiir burada çıkacak.</div>
+
+    <script>
+        function showPoem() {
+            const giftBox = document.querySelector('.gift-box');
+            const poem = document.getElementById('poem');
+            giftBox.style.display = 'none'; // Hediye kutusunu gizle
+            poem.style.display = 'block'; // Şiiri göster
+        }
+    </script>
+</body>
+</html>
