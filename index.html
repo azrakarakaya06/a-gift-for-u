@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sana bir sürprizim var</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e6f6; /* Yumuşak bir arka plan rengi */
+        }
+        .gift-box {
+            width: 200px;
+            height: 200px;
+            background-color: #ffcccc;
+            border: 2px solid #ff6666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+        }
+        .gift-box:hover {
+            transform: scale(1.1) rotate(10deg); /* Hediye kutusuna animasyon ekleme */
+        }
+        #poem {
+            display: none;
+            font-size: 20px;
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gift-box" onclick="showPoem()">🎁 Tıkla!</div>
+    <div id="poem">ne hasta bekler sabahı, ne taze ölüyü mezar, ne de şeytan bir günahı, seni beklediğim kadar... bilmiyorum ama sen bana baktıkça kendimi daha değerli hissediyorum ve mutlu oluyorum, ne zaman seni oyunda görsem mutlu oluyorum. benimle ne zaman konuşsan mutlu oluyorum ama sen ve ben asla kavuşamayacak gibiyiz. senin üzülmeni asla istemem. </div>
+
+    <script>
+        function showPoem() {
+            const giftBox = document.querySelector('.gift-box');
+            const poem = document.getElementById('poem');
+            giftBox.style.display = 'none'; // Hediye kutusunu gizle
+            poem.style.display = 'block'; // Şiiri göster
+        }
+    </script>
+</body>
+</html>
