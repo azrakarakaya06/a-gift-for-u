@@ -47,7 +47,7 @@
 </head>
 <body>
     <div class="gift-box" onclick="showPoem()"></div> <!-- Hediye kutusu -->
-    <div id="poem">Sevdiğim için yazdığım güzel bir şiir burada çıkacak.</div>
+    <div id="poem">Seni tanımaya başladığımdan beri seni seviyorum ama kavuşamayız seninle, aramızda engeller var ve aşmak çok zor olur ve belki aşamayız bile hiç belli olmaz. Belki de bu kavuşma bizi daha da ayırır ve bi daha birbirimizi bile göremeyebiliriz. İşte bu yüzden seninle olmak için seninle olmak istemiyorum. Hayat bu belki engelimiz ortadan kalkar ve mutlu oluruz.</div>
 
     <script>
         function showPoem() {
